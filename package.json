@@ -1,17 +1,19 @@
 {
-  "name": "goit-react-hw-06-phonebook",
+  "name": "goit-react-hw-07-phonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yanahorbachova.github.io/goit-react-hw-06-phonebook/",
+  "homepage": "https://yanahorbachova.github.io/goit-react-hw-07-phonebook/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
     "gh-pages": "^3.2.3",
     "modern-normalize": "^1.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-loader-spinner": "^4.0.0",
     "react-redux": "^7.2.4",
     "react-scripts": "4.0.3",
     "redux": "^4.1.0",
@@ -26,7 +28,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -b master -d build",
+    "server": "json-server --port 4040 --deley 200 --watch db.json"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +51,7 @@
   },
   "devDependencies": {
     "husky": "^7.0.1",
+    "json-server": "^0.16.3",
     "lint-staged": "^11.0.1",
     "prettier": "^2.3.2",
     "prop-types": "^15.7.2",

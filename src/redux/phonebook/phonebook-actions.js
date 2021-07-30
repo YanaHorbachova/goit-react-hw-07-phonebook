@@ -1,46 +1,17 @@
-import shortId from "shortid";
 import { createAction } from "@reduxjs/toolkit";
 
-const addContact = createAction("contacts/Add", ({ name, number }) => ({
-  payload: {
-    id: shortId.generate(),
-    name,
-    number,
-  },
-}));
 
-const deleteContact = createAction("contacts/Delete");
-const filter = createAction("contacts/Filter");
+export const addContactRequest = createAction("contacts/addContactRequest");
+export const addContactSuccess = createAction("contacts/addContactSuccess");
+export const addContactError = createAction("contacts/addContactError");
 
-const actions = { addContact, deleteContact, filter };
+export const fetchContactsRequest = createAction("contacts/fetchContactsRequest");
+export const fetchContactsSuccess = createAction("contacts/fetchContactsSuccess");
+export const fetchContactsError = createAction("contacts/fetchContactsError");
 
-export default actions;
+export const deleteContactRequest = createAction("contacts/deleteContactRequest");
+export const deleteContactSuccess = createAction("contacts/deleteContactSuccess");
+export const deleteContactError = createAction("contacts/deleteContactError");
 
-// / WITHOUT REDUX TOOLKIT
+export const changeFilter = createAction("contacts/changeFilter");
 
-// import shortId from 'shortid';
-// import actionTypes from './phonebook-types'
-
-// const addContact = ({name, number}) => (
-//     {
-//         type: actionTypes.ADD,
-//         payload: {
-//              id: shortId.generate(),
-//              name,
-//              number
-//         }
-//     }
-// )
-
-// const deleteContact = (contactId) => (
-//     {
-//   type: actionTypes.DELETE,
-//   payload: contactId,
-//   })
-
-//   const filter = (value) => ({
-//     type: actionTypes.FILTER,
-//     payload: value,
-//   });
-
-// export default { addContact, deleteContact, filter };
